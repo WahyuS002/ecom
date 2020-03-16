@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Detail')
+
 @section('prepend-style')
-<link rel="stylesheet" href="frontend/libraries/xzoom/dist/xzoom.css" />
+<link rel="stylesheet" href="{{ url('frontend/libraries/xzoom/dist/xzoom.css') }}" />
 @endsection
+
 @section('content')
 <main>
     <section class="section-details-header"></section>
@@ -35,44 +37,44 @@
                   <img
                     class="xzoom"
                     id="xzoom-default"
-                    src="frontend/images/details-1.jpg"
-                    xoriginal="frontend/images/details-1.jpg"
+                    src="{{ url('frontend/images/details-1.jpg') }}"
+                    xoriginal="{{ url('frontend/images/details-1.jpg') }}"
                   />
                   <div class="xzoom-thumbs">
-                    <a href="frontend/images/details-1.jpg"
+                    <a href="{{ url('frontend/images/details-1.jpg') }}"
                       ><img
                         class="xzoom-gallery"
                         width="128"
-                        src="frontend/images/details-1.jpg"
-                        xpreview="frontend/images/details-1.jpg"
+                        src="{{ url('frontend/images/details-1.jpg') }}"
+                        xpreview="{{ url('frontend/images/details-1.jpg') }}"
                     /></a>
-                    <a href="frontend/images/details-1.jpg"
+                    <a href="{{ url('frontend/images/details-1.jpg') }}"
                       ><img
                         class="xzoom-gallery"
                         width="128"
-                        src="frontend/images/details-1.jpg"
-                        xpreview="frontend/images/details-1.jpg"
+                        src="{{ url('frontend/images/details-1.jpg') }}"
+                        xpreview="{{ url('frontend/images/details-1.jpg') }}"
                     /></a>
-                    <a href="frontend/images/details-1.jpg"
+                    <a href="{{ url('frontend/images/details-1.jpg') }}"
                       ><img
                         class="xzoom-gallery"
                         width="128"
-                        src="frontend/images/details-1.jpg"
-                        xpreview="frontend/images/details-1.jpg"
+                        src="{{ url('frontend/images/details-1.jpg') }}"
+                        xpreview="{{ url('frontend/images/details-1.jpg') }}"
                     /></a>
-                    <a href="frontend/images/details-1.jpg"
+                    <a href="{{ url('frontend/images/details-1.jpg') }}"
                       ><img
                         class="xzoom-gallery"
                         width="128"
-                        src="frontend/images/details-1.jpg"
-                        xpreview="frontend/images/details-1.jpg"
+                        src="{{ url('frontend/images/details-1.jpg') }}"
+                        xpreview="{{ url('frontend/images/details-1.jpg') }}"
                     /></a>
-                    <a href="frontend/images/details-1.jpg"
+                    <a href="{{ url('frontend/images/details-1.jpg') }}"
                       ><img
                         class="xzoom-gallery"
                         width="128"
-                        src="frontend/images/details-1.jpg"
-                        xpreview="frontend/images/details-1.jpg"
+                        src="{{ url('frontend/images/details-1.jpg') }}"
+                        xpreview="{{ url('frontend/images/details-1.jpg') }}"
                     /></a>
                   </div>
                 </div>
@@ -93,7 +95,7 @@
                 <div class="features row pt-3">
                   <div class="col-md-4">
                     <img
-                      src="frontend/images/ic_event.png"
+                      src="{{ url('frontend/images/ic_event.png') }}"
                       alt=""
                       class="features-image"
                     />
@@ -104,7 +106,7 @@
                   </div>
                   <div class="col-md-4 border-left">
                     <img
-                      src="frontend/images/ic_bahasa.png"
+                      src="{{ url('frontend/images/ic_bahasa.png') }}"
                       alt=""
                       class="features-image"
                     />
@@ -115,7 +117,7 @@
                   </div>
                   <div class="col-md-4 border-left">
                     <img
-                      src="frontend/images/ic_foods.png"
+                      src="{{ url('frontend/images/ic_foods.png') }}"
                       alt=""
                       class="features-image"
                     />
@@ -132,7 +134,7 @@
             <div class="card card-details card-right">
               <h2>Members are going</h2>
               <div class="members my-2">
-                <img src="frontend/images/members.png" alt="" class="w-75" />
+                <img src="{{ url('frontend/images/members.png') }}" alt="" class="w-75" />
               </div>
               <hr />
               <h2>Trip Informations</h2>
@@ -168,7 +170,7 @@
 @endsection
 
 @push('addon-script')
-<script src="frontend/libraries/xzoom/dist/xzoom.min.js"></script>
+<script src="{{ url('frontend/libraries/xzoom/dist/xzoom.min.js') }}"></script>
 <script>
     $(document).ready(function () {
         $('.xzoom, .xzoom-gallery').xzoom({
